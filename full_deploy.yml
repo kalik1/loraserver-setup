@@ -1,8 +1,4 @@
 - name: install python
-  hosts:
-    - single_server
-    - vagrant
-  become: yes
   gather_facts: no
 
   tasks:
@@ -10,9 +6,6 @@
       raw: apt-get install -y python-minimal
 
 - name: single-server loraserver setup
-  hosts:
-    - single_server
-    - vagrant
   roles:
     - base
     - iptables
@@ -26,5 +19,4 @@
     - loraserver
     - lora-app-server
     - lora-geo-server
-  become: yes
 
