@@ -1,4 +1,5 @@
 - name: single-server loraserver setup
+  hosts: all
   roles:
     - base
     - iptables
